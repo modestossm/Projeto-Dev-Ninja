@@ -15,8 +15,13 @@ body {
     font-weight: 400;
     font-style: normal;
     background: var(--bg-page) linear-gradient(to bottom, #1D0738ff, #1D073800) fixed;
+    color: rgb(200, 200, 200);
 }
 
 .logoicon {
     background-color: #1D0738;
+}
+
+img {
+    max-width: 100px;
 }
