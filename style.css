@@ -14,24 +14,42 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background: var(--bg-page) linear-gradient(to bottom, #1D0738ff, #1D073800) fixed;
-    color: rgb(200, 200, 200);
+    background: var(--bg-page) linear-gradient(to bottom, #1D0738ff 25%, #1D073800) fixed;
+    color: #c8c8c8;
 }
 
-.logoicon {
+.logo-icon {
     background-color: #1D0738;
+    position: sticky;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem 1.75rem;
+    justify-content: space-between;
+
+    & a img {
+        max-width: 32px;
+    }
+}
+
+.logo-icon-logo {
+    width: 6.5rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background-color: #c8c8c8;
+    border-radius: 6rem;
+    color: #0B090D;
+    line-height: 1rem;
+    font-size: .7rem;
+    max-height: 42px;
+
+    & img {
+        max-width: 42px;
+    }
 }
 
 img {
     max-width: 100px;
-}
-
-.logoicon-logo {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-
-    & img {
-        max-width: 65px;
-    }
 }
