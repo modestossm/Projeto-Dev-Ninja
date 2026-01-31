@@ -25,3 +25,13 @@ body {
 img {
     max-width: 100px;
 }
+
+.logoicon-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    & img {
+        max-width: 65px;
+    }
+}
