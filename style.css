@@ -220,3 +220,69 @@ p {
         scroll-snap-align: center;
     }
 }
+
+main {
+/* Apply this class to the element whose scrollbar you want to style */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color); /* RE-ADDED */
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+   /* NEW: Track Shadow */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: var(--primary-color);
+}
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* Firefox fallback (limited styling) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+  }
+}
+
+.books, .books-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-distance-gap);
+}
+
+.books-card {
+    text-align: center;
+}
+
+.books-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.books-card-cta {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+}
+
+.btn-ghost {
+    color: var(--primary-color);
+    border: none;
+    background-color: transparent;
+}
+
+.books-card-price {
+    font-size: 2rem;
+    font-weight: 900;
+}
