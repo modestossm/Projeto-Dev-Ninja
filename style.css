@@ -9,6 +9,8 @@
     --grid-gap: 0.75rem;
     --grid-margin: 1.5rem;
     --text-color: #dddddd;
+
+    --h1-size: 1.75rem;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background: var(--bg-page) linear-gradient(to bottom, #1D0738ff 25%, #1D073800 50%) fixed;
-    color: #dddddd;
+    color: var(--text-color);
 }
 
 a {
@@ -84,4 +86,25 @@ img {
             border-bottom: 1px solid #E63DC0;
         }
     }
+}
+
+h1 {
+    font-size: var(--h1-size);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero-title-upper {
+    text-transform: uppercase;
+    /* color: transparent;
+    -webkit-text-stroke: 2px var(--text-color); */
+
+    color: #1D0738;
+    text-shadow: 2px 2px var(--text-color), -2px 2px var(--text-color), 2px -2px var(--text-color), -2px -2px var(--text-color);
+    margin-top: 2px;
+    display: inline-block;
 }
