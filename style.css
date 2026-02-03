@@ -28,7 +28,11 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background: var(--bg-page) linear-gradient(to bottom, #1D0738ff 25%, #1D073800 50%) fixed;
+    background: linear-gradient(to bottom, rgba(29, 7, 56, .95) 25%, hsla(0, 0%, 0%, 0.3) 70%) fixed,
+    url(/assets/img/bg-gradient-mobile.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--text-color);
 }
 
@@ -138,7 +142,7 @@ h1 {
 } */
 
 main > * {
-    padding-top: var(--section-distance-top);
+    margin-top: var(--section-distance-top);
 }
 
 .h2 {
@@ -261,6 +265,11 @@ main {
 
 .books-card {
     text-align: center;
+
+    & img {
+        max-width: 12.5rem;
+        padding-bottom: 1rem;
+    }
 }
 
 .books-card-content {
@@ -285,4 +294,51 @@ main {
 .books-card-price {
     font-size: 2rem;
     font-weight: 900;
+}
+
+.news {
+    background: linear-gradient(to bottom, rgba(238, 49, 49, 0.75), rgba(238, 49, 49, 0.75)),
+    url(/assets/img/bg-news-mobile.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: var(--grid-margin);
+
+
+    & img {
+        max-width: 2.5rem;
+    }
+
+    & .news-seta {
+            max-width: 3.5rem;
+            display: none;
+        }
+}
+
+.news-content {
+    display: flex;
+    gap: 1rem;
+
+    & .btn {
+        margin-left: auto;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+.news-whats {
+    position: static;
+    width: 2.5rem;
 }
