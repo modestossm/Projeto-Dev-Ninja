@@ -15,7 +15,7 @@
     --h1-size: 1.75rem;
     --h2-size: 1.5rem;
     --h3-size: 1.25rem;
-    --h4-size: 1rem;
+    --h4-size: 1.1rem;
 
     --button-padding-y: 1rem;
     --button-padding-x: 2.25rem;
@@ -225,7 +225,7 @@ p {
 
     & img {
         margin-left: var(--grid-gap);
-        width: calc(100vw - var(--grid-margin)*2);
+        width: calc(100% - var(--grid-margin)*2);
         max-width: 25rem;
         flex-grow: 0;
         flex-shrink: 0;
@@ -330,6 +330,7 @@ main {
 .news-content {
     display: flex;
     gap: 1rem;
+    align-items: center;
 
     & .btn {
         margin-left: auto;
@@ -345,6 +346,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
     border: 0;
+    top: 0;
 }
 
 .news-whats {
@@ -371,7 +373,7 @@ main {
 
 .books-others-card {
     margin-left: var(--grid-gap);
-    max-width: calc(100% - (var(--grid-margin)*1.5));
+    max-width: calc(100% - (var(--grid-margin)*1));
     flex-grow: 0;
     flex-shrink: 0;
     scroll-snap-align: center;
@@ -380,7 +382,7 @@ main {
     gap: var(--grid-gap);
 
     & img {
-        max-width: 32%;
+        max-width: 33%;
     }
 }
 
@@ -402,7 +404,7 @@ main {
 
 .footer {
     background-color: #070608;
-    padding-top: 2rem;
+    padding-top: 3rem;
     margin-top: 1rem;
     padding-bottom: 1rem;
 
@@ -425,9 +427,61 @@ main {
     align-self: stretch;
 
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 
     & img {
         max-width: 2.5rem;
+    }
+}
+
+.sm-hide {
+    display: none;
+}
+
+@media screen and (width >= 50.625em) {
+    .md-hide {
+        display: none;
+    }
+
+    .md-show {
+        display: revert;
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        background-image: linear-gradient(to bottom, #1D0738ff 90%, #1D073800);
+    }
+
+    .logo-icon-logo {
+    width: 7.2rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: #ffffff;
+    border-radius: 6rem;
+    color: #0B090D;
+    line-height: 1.1rem;
+    font-size: .7rem;
+    max-height: 46px;
+
+    margin: auto;
+
+    & img {
+        max-width: 46px;
+        }
+    }
+
+    .menu {
+        margin-top: 1.5rem;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        justify-content: center;
     }
 }
