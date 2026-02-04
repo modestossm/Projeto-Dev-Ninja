@@ -54,6 +54,10 @@ img {
     margin-right: var(--grid-margin);
 }
 
+.header {
+    z-index: 1;
+}
+
 .logo-icon {
     /* background-color: #1D0738; */
     position: sticky;
@@ -311,7 +315,7 @@ main {
 }
 
 .news {
-    background: linear-gradient(to bottom, rgba(238, 49, 49, 0.72), rgba(238, 49, 49, 0.72)),
+    background: linear-gradient(to bottom, rgba(238, 49, 49, 0.7), rgba(238, 49, 49, 0.7)),
     url(/assets/img/bg-news-mobile.webp);
     background-position: center;
     background-size: cover;
@@ -328,7 +332,6 @@ main {
 
     & .news-seta {
             max-width: 3.5rem;
-            display: none;
         }
 }
 
@@ -352,11 +355,6 @@ main {
     white-space: nowrap;
     border: 0;
     top: 0;
-}
-
-.news-whats {
-    position: static;
-    width: 2.5rem;
 }
 
 .books-others {
@@ -453,10 +451,36 @@ main {
     box-shadow: 0 .6rem 1.5rem rgba(0,0,0,0.5);
 }
 
+@media screen and (width < 50.625em) {
+    .sm-sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 0;
+        top: 0;
+    }
+
+    .news-whats {
+        position: static;
+        width: 2.5rem;
+    }
+
+    .news-telegram {
+        position: static;
+        width: 2.5rem;
+    }
+}
+
 @media screen and (width >= 50.625em) {
     :root {
         --h1-size: 3.25rem;
-        --h1-size: 2.25rem;
+        --h2-size: 2.25rem;
+        --h3-size: 1.75rem;
+        --h4-size: 1.5rem;
         --button-font-size: 1.25rem;
 
         --grid-gap: 1.25rem;
@@ -551,5 +575,122 @@ main {
     .cursos-card-cta {
         flex-direction: row;
         justify-content: end;
+    }
+
+    .testimonials-carroussel img {
+        max-width: 38%;
+    }
+
+    .testimonials-carroussel-wrapper {
+        position: relative;
+  
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 1rem;
+            width: 7.5rem;
+            pointer-events: none;
+        }
+
+        &::before {
+            left: 0;
+            background-image: linear-gradient(to right, var(--bg-page), #0000);
+        }
+
+        &::after {
+            right: 0;
+            background-image: linear-gradient(to left, var(--bg-page), #0000);
+        }
+    }
+
+    .books-card {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: var(--grid-gap);
+        text-align: left;
+    }
+
+    .books-card-cta {
+        flex-direction: row;
+    }
+
+    .books-card-img {
+        grid-column: 1 / 3;
+        width: 100%;
+    }
+
+    .books-card-content {
+        grid-column: 3 / -1;
+
+        text-align: left;
+
+        & .h3 {
+            text-align: inherit;
+        }
+    }
+
+    .books-card:nth-child(odd) .books-card-img {
+        grid-column: 7 / -1;
+        order: 2;
+    }
+
+    .books-card:nth-child(odd) .books-card-content {
+        grid-column: 1 / 7;
+        text-align: right;
+    }
+
+    .books-card:nth-child(odd) .books-card-cta {
+        justify-content: end;
+    }
+
+    .news {
+        background: linear-gradient(to bottom, rgba(238, 49, 49, 0.7), rgba(238, 49, 49, 0.7)),
+        url(/assets/img/bg-news-pc.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .news-content {
+        gap: .7rem;
+        align-items: center;
+    }
+
+    .news-whats {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+
+        & span {
+            margin-left: .5rem;
+        }
+    }
+
+    .news-telegram {
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+
+        & span {
+            margin-left: .5rem;
+        }
+    }
+
+    .books-others-card {
+        align-items: start;
+        padding-right: var(--grid-margin);
+    }
+
+    .books-others-card-img {
+        width: auto;
+    }
+
+    .books-others-card-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
     }
 }
