@@ -769,6 +769,47 @@ main {
         }
     }
 
-    
+    .five-stars {
+        max-width: 6.5rem;
+    }
 
+    .cursos-card {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .cursos-card-img {
+        grid-column: 2/6;
+    }
+
+    .cursos-card-content {
+        grid-column: 6/-2;
+    }
+
+    .testimonials-carroussel img {
+        max-width: 25%;
+    }
+
+    .books-card {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .books-card-img {
+        grid-column: 2/4;
+        width: 100%;
+    }
+
+    .books-card-content {
+        grid-column: 4/-2;
+    }
+
+    .books-card:nth-child(odd) {
+        .books-card-img {
+            grid-column: 10/-1;
+            width: 100%;
+        }
+        
+        .books-card-content {
+            grid-column: 2/10;
+        }
+    }
 }
