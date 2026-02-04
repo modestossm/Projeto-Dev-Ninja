@@ -369,8 +369,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    padding-bottom: 1rem;
-    padding-right: var(--grid-gap);
+    padding-bottom: 1rem; 
     scroll-snap-type: x mandatory;
 }
 
@@ -506,21 +505,21 @@ main {
     }
 
     .logo-icon-logo {
-    width: 7.2rem;
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    background-color: #ffffff;
-    border-radius: 6rem;
-    color: #0B090D;
-    line-height: 1.1rem;
-    font-size: .7rem;
-    max-height: 46px;
+        width: 7.2rem;
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        background-color: #ffffff;
+        border-radius: 6rem;
+        color: #0B090D;
+        line-height: 1.1rem;
+        font-size: .7rem;
+        max-height: 46px;
 
-    margin: auto;
+        margin: auto;
 
-    & img {
-        max-width: 46px;
+        & img {
+            max-width: 46px;
         }
     }
 
@@ -692,5 +691,25 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
+    }
+
+    p {
+        line-height: 1.4;
+    }
+
+    .footer .container {
+        width: 36.25%;
+        text-wrap: balance;
+        display: block;
+        
+        & p {
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        & .logo-icon-logo {
+            padding: 0;
+            margin: 0 1.5rem 0 0;
+        }
     }
 }
