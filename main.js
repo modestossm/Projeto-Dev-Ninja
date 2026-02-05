@@ -40,7 +40,6 @@ class Setas {
     }
 
     init() {
-        console.log(this);
         this.createIndicators();
         this.addListeners();
         this.updateBooks();
