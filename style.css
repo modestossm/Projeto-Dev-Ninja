@@ -743,8 +743,20 @@ main {
         background-attachment: fixed;
     }
 
+    a {
+        font-size: 1.2rem;
+    }
+
     p {
         font-size: 1rem;
+    }
+
+    .cursos p {
+        font-size: 1.5rem;
+    } 
+
+    .books p, .books-others p {
+        font-size: 1.25rem;
     }
 
     .header {
@@ -909,5 +921,75 @@ main {
 
     .testimonials {
         overflow: hidden;
+    }
+
+    .lg-show {
+        display: revert;
+    }
+
+    .no-js {
+        & .books-others-btn, .indicator {
+            display: none;
+        }
+    }
+
+    .js {
+        & .books-others-wrapper {
+            overflow: hidden;
+            --currentIndex: 0;
+        }
+    }
+
+    .books-others-carroussel {
+        position: relative;
+    }
+
+    .books-others-card {
+        transition: transform .3s ease-in;
+        transform: translateX(calc(var(--currentIndex) * (-100%)));
+    }
+
+    .books-others-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        outline: none;
+        max-width: 80px;
+        background-color: #0000;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: var(--grid-margin);
+
+        & img {
+            transform: scaleX(-1);
+        }
+    }
+
+    .next {
+        right: var(--grid-margin);
+    }
+
+    .books-others-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .indicator {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: #FFF8;
+        cursor: pointer;
+        margin-top: -6rem;
+    }
+
+    .indicator.active {
+        background-color: #FFF;
     }
 }

@@ -28,14 +28,14 @@ function setupTestemunho(config) {
 
 setupTestemunho({wrapper: ".testimonials-carroussel", items: "img"});
 
-class bookOthersSetas {
+class Setas {
     constructor(selector) {
-        this.bookSetas = document.querySelector(selector);
-        this.wrapper = this.bookSetas.querySelector("[data-wrapper]");
-        this.prev = this.bookSetas.querySelector("[data-prev]");
-        this.next = this.bookSetas.querySelector("[data-next]");
-        this.items = this.wrapper.querySelectorAll("[data-items]")
-        this.indicators = document.getElementById(this.bookSetas.getAttribute("books-others-indicators"));
+        this.setas = document.querySelector(selector);
+        this.wrapper = this.setas.querySelector("[data-wrapper]");
+        this.prev = this.setas.querySelector("[data-prev]");
+        this.next = this.setas.querySelector("[data-next]");
+        this.indicators = document.getElementById(this.setas.getAttribute("data-indicators"));
+        this.items = this.wrapper.querySelectorAll("[data-items]");
         this.currentIndex = 0;
     }
 
@@ -52,8 +52,11 @@ class bookOthersSetas {
             indicator.classList.add("indicator");
 
             indicator.setAttribute("data-index", index);
+            //indicator.textContent = index;
             this.indicators.appendChild(indicator);
         });
+
+        this.indicatorsz = this.indicators.querySelectorAll(".indicator")
     }
 
     addListeners() {
@@ -63,13 +66,13 @@ class bookOthersSetas {
         })
 
         this.next.addEventListener("click", () => {
-            this.currentIndex = (this.currentIndex + 1) % this.currentIndex.length;
+            this.currentIndex = (this.currentIndex + 1) % this.items.length;
             this.updateBooks();
         })
 
-        this.indicators.querySelectorAll(".indicator").forEach(indicator => {
+        this.indicatorsz.forEach(indicator => {
             indicator.addEventListener("click", e => {
-                this.goToSlide(parseInt(e.target.getAttribute("data-index")))
+                this.goToSlide(parseInt(e.target.getAttribute("data-index")));
             })
         })
     }
@@ -77,7 +80,7 @@ class bookOthersSetas {
     updateBooks() {
         this.wrapper.style.setProperty("--currentIndex", this.currentIndex);
 
-        this.indicators.querySelectorAll("[data-index]").forEach(item => item.classList.remove());
+        this.indicators.querySelector(".active")?.classList.remove("active");
         this.indicators.querySelector(`[data-index='${this.currentIndex}']`).classList.add("active");
     }
 
@@ -87,4 +90,4 @@ class bookOthersSetas {
     }
 }
 
-new bookOthersSetas(".books-others-carroussel").init();
+new Setas(".books-others-carroussel").init();
