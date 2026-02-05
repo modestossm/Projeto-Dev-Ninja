@@ -55,7 +55,7 @@ img {
 }
 
 .header {
-    z-index: 1;
+    z-index: 9;
 }
 
 .logo-icon {
@@ -586,6 +586,7 @@ main {
             bottom: 1rem;
             width: 7.5rem;
             pointer-events: none;
+            z-index: 2;
         }
 
         &::before {
@@ -742,6 +743,10 @@ main {
         background-attachment: fixed;
     }
 
+    p {
+        font-size: 1rem;
+    }
+
     .header {
         padding: 3rem 0;
     }
@@ -791,7 +796,7 @@ main {
     }
 
     .testimonials-carroussel img {
-        max-width: 20%;
+        max-width: 420px;
     }
 
     .books-card {
@@ -879,7 +884,30 @@ main {
         }
     }
 
+    @keyframes scrollLoop {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc((-440px) * 6));
+        }
+    }
+
     .js-enabled.testimonials-carroussel {
+        overflow: hidden;
+        animation: scrollLoop 20s linear infinite;
+        width: max-content;
+
+        & img {
+            margin-left: var(--grid-gap);
+        }
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    .testimonials {
         overflow: hidden;
     }
 }

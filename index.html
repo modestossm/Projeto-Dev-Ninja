@@ -197,9 +197,12 @@
                 <h2 class="h2">Livros recomendados <span class="title-thin">Excelentes livros que podem ser adquiridos na Amazon</span></h2>
             </div>
             
-            <div class="books-others-carroussel">
-                <div class="books-others-wrapper">
-                    <article class="books-others-card">
+            <div class="books-others-carroussel" data-indicators="books-others-indicators">
+
+                <button class="books-others-btn prev" data-prev>&lt;</button>
+
+                <div class="books-others-wrapper" data-wrapper>
+                    <article class="books-others-card" data-items>
                         <img src="assets/img/Lógica de Programação.webp" alt="Lógica de Programação e Algoritmos com Javascript" class="books-others-card-img">
 
                         <div class="books-others-card-content">
@@ -215,7 +218,7 @@
                         </div>
                     </article>
 
-                    <article class="books-others-card">
+                    <article class="books-others-card" data-items>
                         <img src="assets/img/Refatoração.webp" alt="Refatoração" class="books-others-card-img">
 
                         <div class="books-others-card-content">
@@ -231,7 +234,7 @@
                         </div>
                     </article>
 
-                    <article class="books-others-card">
+                    <article class="books-others-card" data-items>
                         <img src="assets/img/código-limpo.webp" alt="Código Limpo" class="books-others-card-img">
 
                         <div class="books-others-card-content">
@@ -248,7 +251,11 @@
                     </article>
                 </div>
 
+                <button class="books-others-btn next" data-next>&gt;</button>
+
             </div> 
+
+            <div class="books-others-indicators" id="books-others-indicators"></div>
             
             <div class="btn-center"><a href="#" class="btn btn-ghost">Ver mais produtos</a></div>
         </section>
