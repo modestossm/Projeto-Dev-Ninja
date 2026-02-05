@@ -52,7 +52,6 @@ class Setas {
             indicator.classList.add("indicator");
 
             indicator.setAttribute("data-index", index);
-            //indicator.textContent = index;
             this.indicators.appendChild(indicator);
         });
 
