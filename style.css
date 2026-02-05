@@ -31,7 +31,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background: linear-gradient(to bottom, rgba(29, 7, 56, .95) 25%, hsla(0, 0%, 0%, 0.3) 70%) fixed,
-    url(./assets/img/bg-gradient-mobile.webp);
+    url(../assets/img/bg-gradient-mobile.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -316,7 +316,7 @@ main {
 
 .news {
     background: linear-gradient(to bottom, rgba(238, 49, 49, 0.7), rgba(238, 49, 49, 0.7)),
-    url(./assets/img/bg-news-mobile.webp);
+    url(../assets/img/bg-news-mobile.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -642,7 +642,7 @@ main {
 
     .news {
         background: linear-gradient(to bottom, rgba(238, 49, 49, 0.7), rgba(238, 49, 49, 0.7)),
-        url(./assets/img/bg-news-pc.webp);
+        url(../assets/img/bg-news-pc.webp);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -737,7 +737,7 @@ main {
 
     body {
         background: linear-gradient(to bottom, rgba(29, 7, 56, .95) 25%, hsla(0, 0%, 0%, 0.3) 70%) fixed,
-        url(./assets/img/bg-gradient-pc.webp);
+        url(../assets/img/bg-gradient-pc.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
